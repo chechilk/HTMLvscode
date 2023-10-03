@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(255, 229, 204);
+}
+
+h1{
+    color: rgb(255, 153, 51);
+}
+
+span{
+    color: rgb(255, 102, 102);
+}
+
+.container{
+    column-count: 2;
+    column-width: 200px;
+}
