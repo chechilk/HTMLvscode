@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'SpriteGraffitiShadow';
+	src: url('../fonts/spritegraffitishadow.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/spritegraffitishadow.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/spritegraffitishadow.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/spritegraffitishadow.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/spritegraffitishadow.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/spritegraffitishadow.svg#spritegraffitishadow') format('svg'); /* Chrome < 4, Legacy iOS */
+}
