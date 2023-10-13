@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(255, 229, 204);
+}
+
+h1{
+    color: rgb(255, 153, 51);
+    font-family: 'SpriteGraffitiShadow', sans-serif;
+    margin-left: 500px;
+}
+
+h3{
+    font-family: 'SpriteGraffitiShadow', sans-serif;
+    margin-left: 25px;
+}
+span{
+    color: rgb(255, 102, 102);
+}
+
+p{
+    margin-left: 140px;
+    font-size: larger;
+}
+ol{
+    font-size: larger;
+}
+ul{
+    font-size: larger;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: rgb(255, 102, 102);
+}
+
+.container{
+    column-count: 2;
+    column-width: 250px;
+    margin-left: 50px;
+}
+
+.main{
+    margin-left: 50px;
+}
+
+.picture{
+    margin-left: 100px;
+}
+ 
+
+@font-face {
+	font-family: 'SpriteGraffitiShadow';
+	src: url('font/fonts/spritegraffitishadow.eot'); /* IE 9 Compatibility Mode */
+	src: url('font/fonts/spritegraffitishadow.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('font/fonts/spritegraffitishadow.woff2') format('woff2'), /* Super Modern Browsers */
+		url('font/fonts/spritegraffitishadow.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('font/fonts/spritegraffitishadow.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('font/fonts/spritegraffitishadow.svg#spritegraffitishadow') format('svg'); /* Chrome < 4, Legacy iOS */
+}
