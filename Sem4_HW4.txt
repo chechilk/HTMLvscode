@@ -1,0 +1,102 @@
+// Sem4_HW4
+// Ниже дз №2
+<?php
+$name = 'Вика';
+$job = 'SOC';
+$city = 'Москва';
+$email = 'xxx@yandex.ru';
+$phone = '+9784576898';
+
+$skills = [
+    [
+        'name' => 'Фотошоп',
+        'percent' => 30,
+    ],
+    [
+        'name' => 'Иллюстратор',
+        'percent' => 70,
+    ],
+    [
+        'name' => 'Медиа',
+        'percent' => 40,
+    ],
+        [
+        'name' => 'Стоять на голове',
+        'percent' => 0,
+    ],
+];
+
+$job = [
+'job_name' => ['GB', 'Бэттери Тим', 'Студия Лебедева'],
+'job_data' => ['2022 - настоящее время', '2000 - 2006', '1999 - 2000'],
+'job_desc' => ['Много интересной работы', 'Разная работа', 'Очень много креативной работы']
+]
+?>
+
+// о себе
+<h2><?=$name?></h2>
+            </div>
+          </div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i><?=$job?></p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i><?=$city?></p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><?=$email?></p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><?=$phone?></p>
+ 
+            <hr>
+ 
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Навыки</b></p>
+             <?php for ($i=0; $i<count($skills); $i++):?>
+                <p><?php echo $skills[$i]["name"]?></p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                  <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:<?php echo $skills[$i]["percent"]?>%"><?php echo $skills[$i]['percent']?>%</div>
+                </div>
+            <?php endfor;?>
+
+// Опыт работы
+<div class="w3-twothird">
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i
+              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Опыт работы</h2>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b><?php echo $job['job_name'][0]; ?>
+            </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $job['job_data'][0]; ?> <span
+                class="w3-tag w3-teal w3-round"></span></h6>
+            <p><?php echo $job['job_desc'][0];?></p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b><?php echo $job['job_name'][1];?>
+            </b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $job['job_data'][1];?></h6>
+            <p><?php echo $job['job_desc'][1];?></p>
+            <hr>
+          </div>
+          <div class="w3-container">
+            <h5 class="w3-opacity"><b><?php echo $job['job_name'][2]; ?></b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $job['job_data'][2];?></h6>
+            <p><?php echo $job['job_desc'][2];?></p><br>
+          </div>
+        </div>
+
+// ----------------ДЗ№2-------------------
+CREATE TABLE student(
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+name TEXT NOT NULL,
+age INTEGER NOT NULL,
+adress TEXT NOT NULL
+);
+
+INSERT INTO student(name, age, adress) VALUES('Alex', 32, 'MSC');
+INSERT INTO student(name, age, adress) VALUES('Vova', 13, 'LA');
+INSERT INTO student(name, age, adress) VALUES('Vika', 16, 'MSC');
+INSERT INTO student(name, age, adress) VALUES('Bob', 18, 'UK');
+INSERT INTO student(name, age, adress) VALUES('Max', 24, 'CPB');
+INSERT INTO student(name, age, adress) VALUES('Polina', 19, 'Tiva');
+INSERT INTO student(name, age, adress) VALUES('Anya', 25, 'MSC');
+INSERT INTO student(name, age, adress) VALUES('Tom', 23, 'MSC');
+
+SELECT name AS Имя_студента FROM student
+WHERE adress = "MSC" AND (age >= 18 AND age < 30);
+
